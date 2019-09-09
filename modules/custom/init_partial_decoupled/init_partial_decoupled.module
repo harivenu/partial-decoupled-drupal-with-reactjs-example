@@ -1,0 +1,29 @@
+<?php
+
+  /**
+   * Implements hook_page_attachments().
+   */
+  function init_partial_decoupled_page_attachments(array &$attachments) {
+    $router = [
+      'init_partial_decoupled.article',
+      'init_partial_decoupled.news',
+    ];
+
+    $route_match = \Drupal::routeMatch();
+
+    $protocol = empty($_SERVER["HTTPS"]) ? 'http://' : 'https://';
+    $attachments['#attached']['drupalSettings']['init_partial_decoupled']['CurrentBaseUrl'] = $protocol . $_SERVER["HTTP_HOST"];
+
+    // only for single view
+    if (in_array($route = $route_match->getRouteName(), $router)) {
+
+      if($route == 'init_partial_decoupled.article') {
+        $attachments['#attached']['library'][] = 'init_partial_decoupled/init_article';
+      }
+    }
+    if (in_array($route = $route_match->getRouteName(), $router)) {
+      if($route == 'init_partial_decoupled.news') {
+        $attachments['#attached']['library'][] = 'init_partial_decoupled/init_news';
+      }
+    }
+  }

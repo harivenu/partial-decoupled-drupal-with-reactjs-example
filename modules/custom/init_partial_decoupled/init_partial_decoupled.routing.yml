@@ -1,0 +1,44 @@
+init_partial_decoupled.article:
+  path: '/article'
+  defaults:
+    _controller: '\Drupal\init_partial_decoupled\Controller\MainController::article'
+    _title: 'Partial Decoupling Demo'
+  requirements:
+    _access: 'TRUE'
+
+init_partial_decoupled.news:
+  path: '/news'
+  defaults:
+    _controller: '\Drupal\init_partial_decoupled\Controller\MainController::news'
+    _title: ''
+  requirements:
+    _access: 'TRUE'
+
+init_partial_decoupled.articlejson:
+  path: '/article_json'
+  defaults:
+    _controller: '\Drupal\init_partial_decoupled\Controller\ArticleController::article'
+    _title: ''
+  requirements:
+    _access: 'TRUE'
+
+init_partial_decoupled.news_all:
+  path: '/news_all'
+  defaults:
+    _controller: '\Drupal\init_partial_decoupled\Controller\NewsController::news_all'
+    _title: ''
+  requirements:
+    _access: 'TRUE'
+
+init_partial_decoupled.news_json:
+  path: '/news_json/{nid}'
+  defaults:
+    _controller: '\Drupal\init_partial_decoupled\Controller\NewsController::news_json'
+    _title: ''
+  requirements:
+    _access: 'TRUE'
+
+
+
+
+

@@ -1,0 +1,9 @@
+name: Partial Decoupling Demo
+type: module
+description: 'Demo site for partial decoupling demo'
+package: Decoupled
+
+core: '8.x'
+project: 'init_partial_decoupled'
+
+

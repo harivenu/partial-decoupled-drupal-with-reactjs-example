@@ -1,0 +1,7 @@
+.news .row.news_wrapper {height: 400px;border: 1px solid grey;}
+.news .col-md-4.left {background: #eee;height: 100%;padding:0px;}
+.news .col-md-8.right {height: 100%;    padding: 40px;}
+.news .left .title{padding: 20px;margin-bottom: 20px;}
+.news .left .title:hover {background-color: #fff;border-left: 5px solid #1d84c3;;border-right: 5px solid #1d84c3;cursor: pointer;}
+.news .right .title {font-size: 40px;margin-bottom: 20px;}
+.news .right .No_data_message {padding: 40px;font-size: 30px;}

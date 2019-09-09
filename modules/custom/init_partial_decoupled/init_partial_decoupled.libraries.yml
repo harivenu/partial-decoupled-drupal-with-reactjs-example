@@ -1,0 +1,24 @@
+react:
+  version: 16.3.1
+  js:
+    base/react.production.min.js: {}
+    base/react-dom.production.min.js: {}
+    base/fetch.js: {}
+
+init_article:
+  version: 1.x
+  js:
+    dist/article.js: { cache:true }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - init_partial_decoupled/react
+
+init_news:
+  version: 1.x
+  js:
+    dist/News.js: { cache:true }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - init_partial_decoupled/react
